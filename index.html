@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Certificate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .download-button {
+      background-color: #105cae;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #174372;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="download-button" onclick="downloadCertificate()">Course Certificate</button>
+  </div>
+
+  <script>
+    function downloadCertificate() {
+      const fileUrl = 'nptel.pdf'; // Path to the PDF file
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = 'Course_Certificate.pdf'; // Name of the downloaded file
+      a.click();
+    }
+  </script>
+</body>
+</html>
